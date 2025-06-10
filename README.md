@@ -1,4 +1,4 @@
-# Progetto TypeScript - Beachwear Ecosostenibile
+# Progetto TypeScript - Beachwear Ecosostenibile 	:seedling:
 
 Questo progetto ha lo scopo di sviluppare un sistema in TypeScript che modella la struttura operativa di un brand di beachwear in plastica riciclata, focalizzandosi sulle interazioni tra clienti, prodotti beachwear e processi di produzione sostenibile.
 
@@ -32,32 +32,29 @@ Il progetto richiede solo la scrittura del codice in TypeScript.
 
   1. Clona il repository:
 
-  ``bash:
-
+  ```
   git clone https://github.com/verodevp/projTypeScript.git
+  
   cd projTypeScript
+  ```
 
   2. Installa TypScript (se non già installato):
 
-  ``bash:
-
-  npm i -g typescript
+  `npm i -g typescript`
 
   3. Compila il progetto:
 
-  ``bash:
+  `tsc`
 
-  tsc 
 
-  ## Utilizzo
+
+
 
   Il progetto mostra in una semplice interfaccia HTML la descrizione delle interfacce e delle classi.
   Tutto il codice logico si trova in src/class/app.ts, dove puoi testare le interazioni tra oggetti.
   Puoi modificare i file .ts dentro src/class/ o le interfacce dentro src/interfaces e poi compilare con:
   
-  ``bash:
-  
-  tsc
+  `tsc`
   
   ## Licenza
   
