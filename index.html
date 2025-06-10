@@ -10,73 +10,89 @@
 </head>
 <body>
         <div class="container">
-        <h1>Progetto TypeScript</h1>
-        <p>
-           Questo progetto ha lo scopo di sviluppare un sistema in TypeScript che modella la struttura operativa di un brand di beachwear in plastica riciclata, focalizzandosi sulle interazioni tra clienti, prodotti beachwear e processi di produzione sostenibile. 
-
-Attraverso la definizione di interfacce e classi che rappresentano i vari componenti del sistema (IProdotto, ICliente, IProcessoProduzione), il progetto dimostra come la tecnologia possa supportare l'innovazione sostenibile nel settore della moda.
-
-Il progetto richiede solo la scrittura del codice in TypeScript.
+        <h1 class="center">Progetto TypeScript</h1>
+          <p>
+        Questo progetto ha lo scopo di sviluppare un sistema in TypeScript che modella la struttura operativa di un brand di
+        beachwear in plastica riciclata, focalizzandosi sulle interazioni tra clienti, prodotti beachwear e processi di
+        produzione sostenibile.
+        
+        Attraverso la definizione di interfacce e classi che rappresentano i vari componenti del sistema (IProdotto, ICliente,
+        IProcessoProduzione), il progetto dimostra come la tecnologia possa supportare l'innovazione sostenibile nel settore
+        della moda.
+        
+        Il progetto richiede solo la scrittura del codice in TypeScript.
 </p>
+        <div class="row">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Interfaccia IProdotto</h5>
+                        <p class="card-text">Definisci un'interfaccia IProdotto per rappresentare i diversi articoli di beachwear (costumi da bagno, parei, cappelli) prodotti con plastica riciclata. Segui queste indicazioni:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Proprietà: tipo (costume da bagno, pareo, cappello), ID univoco, taglia, colore, stato (disponibile, esaurito).</li>
+                            <li class="list-group-item">Metodo: “assegnaCliente(cliente: ICliente): void” per assegnare un prodotto a un cliente specifico.</li>
+                        </ul>
 
-<h2>Interfaccia IProdotto</h2>
-<p>Definisci un'interfaccia IProdotto per rappresentare i diversi articoli di beachwear (costumi da bagno, parei, cappelli) prodotti con plastica riciclata.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Interfaccia ICliente</h5>
+                        <p class="card-text">Definisci un'interfaccia ICliente per rappresentare i clienti del brand. Segui queste
+                            indicazioni:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Proprietà: nome, cognome, email, metodo di pagamento preferito.</li>
+                            <li class="list-group-item">Metodo: “ordinaProdotto(prodotto: IProdotto): void” per ordinare un
+                                prodotto.</li>
+                        </ul>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Interfaccia IProcessoProduzione</h5>
+                        <p class="card-text">Definisci un'interfaccia IProcessoProduzione per rappresentare i processi di produzione sostenibile utilizzati da Sunnee. Segui queste indicazioni:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Proprietà: nome del processo, descrizione, prodotti in produzione (IProdotto[]).</li>
+                            <li class="list-group-item">Metodo: “aggiungiProdotto(prodotto: IProdotto): void” per aggiungere un prodotto al processo di produzione.</li>
+                        </ul>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="row">
+            <h2>Classi</h2>
+            <div class="col-s">
+                <p>Implementa le classi Prodotto, Cliente, e ProcessoProduzione che rispettivamente implementano le interfacce
+                    IProdotto, ICliente, e IProcessoProduzione.
+        
+                    Segui queste indicazioni:</p>
+        
+                <ul class="list-group">
+                    <li class="list-group-item">Classe Prodotto: gestisce le informazioni di ciascun articolo di beachwear e
+                        l'assegnazione ai clienti.</li>
+                    <li class="list-group-item">
+                        Classe Cliente: gestisce le informazioni dei clienti e la loro capacità di ordinare prodotti.</li>
+                    <li class="list-group-item">
+                        Classe ProcessoProduzione: rappresenta un processo di produzione specifico utilizzato dal brand,
+                        gestisce i prodotti in produzione e l'aggiunta di nuovi articoli.</li>
+                </ul>
+        
+            </div>
 
-Segui queste indicazioni:
-
-<ul class="list-group">
-    <li class="list-group-item">Proprietà: tipo (costume da bagno, pareo, cappello), ID univoco, taglia, colore, stato (disponibile, esaurito).</li>
-    <li class="list-group-item">Metodo: “assegnaCliente(cliente: ICliente): void” per assegnare un prodotto a un cliente specifico.</li>
-</ul>
-
-
-</p>
-
-<h2>Interfaccia ICliente</h2>
-<p>Definisci un'interfaccia ICliente per rappresentare i clienti del brand.
-
-Segui queste indicazioni:
-
-<ul class="list-group">
-    <li class="list-group-item">Proprietà: nome, cognome, email, metodo di pagamento preferito.</li>
-    <li class="list-group-item">Metodo: “ordinaProdotto(prodotto: IProdotto): void” per ordinare un prodotto.</li>
-</ul>
+        </div>
 
 
 
 
-</p>
-
-<h2>Interfaccia IProdotto</h2>
-<p>
-    Definisci un'interfaccia IProcessoProduzione per rappresentare i processi di produzione sostenibile utilizzati da Sunnee.
-
-Segui queste indicazioni:
-
-<ul class="list-group">
-    <li class="list-group-item">Proprietà: nome del processo, descrizione, prodotti in produzione (IProdotto[]).</li>
-     <li class="list-group-item">Metodo: “aggiungiProdotto(prodotto: IProdotto): void” per aggiungere un prodotto al processo di produzione.</li>
-</ul>
 
 
-
-</p>
-
-<h2>Classi</h2>
-<p>
-    Implementa le classi Prodotto, Cliente, e ProcessoProduzione che rispettivamente implementano le interfacce IProdotto, ICliente, e IProcessoProduzione.
-
-Segui queste indicazioni:
-<ul class="list-group">
-    <li class="list-group-item">Classe Prodotto: gestisce le informazioni di ciascun articolo di beachwear e l'assegnazione ai clienti.</li>
-    <li class="list-group-item">
-Classe Cliente: gestisce le informazioni dei clienti e la loro capacità di ordinare prodotti.</li>
-    <li class="list-group-item">
-Classe ProcessoProduzione: rappresenta un processo di produzione specifico utilizzato dal brand, gestisce i prodotti in produzione e l'aggiunta di nuovi articoli.</li>
-</ul>
-
-
-</p>
 
 
     </div>
