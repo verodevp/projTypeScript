@@ -24,9 +24,9 @@ Il progetto richiede solo la scrittura del codice in TypeScript.
 
   ## Prerequisiti
 
-  -Node.js
-  -TypeScript
-  -
+  - Node.js
+  - TypeScript
+  
 
   ## Installazione
 
@@ -53,15 +53,12 @@ Il progetto richiede solo la scrittura del codice in TypeScript.
 
   Il progetto mostra in una semplice interfaccia HTML la descrizione delle interfacce e delle classi.
   Tutto il codice logico si trova in src/class/app.ts, dove puoi testare le interazioni tra oggetti.
-
-Puoi modificare i file .ts dentro src/class/ o le interfacce dentro src/interfaces e poi compilare con:
-
-``bash:
-
-tsc
-
-
-
-## Licenza
-
-Questo progetto è rilasciato sotto licenza MIT.
+  Puoi modificare i file .ts dentro src/class/ o le interfacce dentro src/interfaces e poi compilare con:
+  
+  ``bash:
+  
+  tsc
+  
+  ## Licenza
+  
+  Questo progetto è rilasciato sotto licenza MIT.
