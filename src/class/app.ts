@@ -2,19 +2,23 @@
 import { IProdotto } from "../interfaces/IProdotto";
 import { ICliente } from "../interfaces/ICliente";
 import { IProcessoProduzione } from "../interfaces/IProcessoProduzione";
+import {TipoProdotto}  from "../interfaces/IProdotto";
+import {StatoProdotto} from "../interfaces/IProdotto";
+import { MetodoPagamento } from "../interfaces/ICliente";
+
 
 // CLASSE PRODOTTO
 class Prodotto implements IProdotto{
 
 
-tipo: 'costume da bagno' | 'pareo' | 'cappello';
+tipo: TipoProdotto;
  id: number;
  taglia: string;
  colore: string;
- stato: "disponibile" | "esaurito";
+ stato: StatoProdotto;
 
     //costruttore per inizializzare le proprietà
-    constructor(tipo: 'costume da bagno' | 'pareo' | 'cappello', id: number,taglia: string, colore: string, stato:'disponibile' | 'esaurito'){
+    constructor(tipo: TipoProdotto, id: number,taglia: string, colore: string, stato: StatoProdotto){
         this.tipo= tipo;
         this.id=id;
         this.taglia= taglia;
@@ -24,7 +28,7 @@ tipo: 'costume da bagno' | 'pareo' | 'cappello';
 
     //implementazione dei metodi dell'interfaccia
      assegnaCliente(cliente: ICliente): void {
-     if(this.stato==='disponibile'){
+     if(this.stato=== StatoProdotto.DISPONBILE){
         
         console.log(`Articolo: ${this.tipo} ordinato da ${cliente.nome} ${cliente.cognome}, email : ${cliente.email}`)
      }else{
@@ -39,8 +43,8 @@ class Cliente implements ICliente{
     nome: string;
     cognome: string;
     email: string;
-    pagamento: 'carta di credito' | 'paypal' | 'contrassegno';
-    constructor(nome:string, cognome:string, email : string, pagamento: 'carta di credito' | 'paypal' | 'contrassegno'){
+    pagamento: MetodoPagamento;
+    constructor(nome:string, cognome:string, email : string, pagamento: MetodoPagamento){
         this.nome=nome;
         this.cognome=cognome;
         this.email=email;
@@ -76,11 +80,11 @@ class ProcessoProduzione implements IProcessoProduzione{
 }
 
 
-let costumeSnero= new Prodotto ('costume da bagno',2,'S','nero', 'disponibile')
-let cappelloSbianco= new Prodotto('cappello', 1, 'S', 'bianco', 'disponibile')
+let costumeSnero= new Prodotto (TipoProdotto.COSTUME_DA_BAGNO,2,'S','nero', StatoProdotto.DISPONBILE)
+let cappelloSbianco= new Prodotto(TipoProdotto.CAPPELLO, 1, 'S', 'bianco', StatoProdotto.DISPONBILE)
 
 
-let clienteMarcoVerdi= new Cliente('Marco', 'Verdi', 'marcoverdi@gmail.com', 'paypal')
+let clienteMarcoVerdi= new Cliente('Marco', 'Verdi', 'marcoverdi@gmail.com', MetodoPagamento.PAYPAL)
 console.log(costumeSnero.stato)
 console.log(costumeSnero.tipo)
 costumeSnero.assegnaCliente(clienteMarcoVerdi)
@@ -98,14 +102,14 @@ console.log(processoRigenerazioneFilato.descrizione)
 processoRigenerazioneFilato.aggiungiProdotto(cappelloSbianco)
 console.log(processoRigenerazioneFilato.prodotti)
 
-let clienteVeronicaFabiani= new Cliente('Veronica', 'Fabiani', 'veronica@gmail.com', 'carta di credito')
+let clienteVeronicaFabiani= new Cliente('Veronica', 'Fabiani', 'veronica@gmail.com', MetodoPagamento.CARTA_DI_CREDITO)
 clienteVeronicaFabiani.ordinaProdotto(cappelloSbianco)
 
-let pareoSverde= new Prodotto('pareo', 3, 'S', 'verde', 'esaurito')
+let pareoSverde= new Prodotto(TipoProdotto.CAPPELLO, 3, 'S', 'verde', StatoProdotto.ESAURITO)
 clienteVeronicaFabiani.ordinaProdotto(pareoSverde)
 
-let pareoMblu= new Prodotto('pareo', 3, 'M', 'blu', 'disponibile' )
-let clienteMartinaRossi= new Cliente('Martina', 'Rossi', 'martina@gmail.com', 'paypal')
+let pareoMblu= new Prodotto(TipoProdotto.PAREO, 3, 'M', 'blu', StatoProdotto.DISPONBILE )
+let clienteMartinaRossi= new Cliente('Martina', 'Rossi', 'martina@gmail.com', MetodoPagamento.PAYPAL)
 clienteMartinaRossi.ordinaProdotto(pareoMblu)
 pareoMblu.assegnaCliente(clienteMartinaRossi)
 
