@@ -28,7 +28,7 @@ tipo: TipoProdotto;
 
     //implementazione dei metodi dell'interfaccia
      assegnaCliente(cliente: ICliente): void {
-     if(this.stato=== StatoProdotto.DISPONBILE){
+     if(this.stato=== StatoProdotto.DISPONIBILE){
         
         console.log(`Articolo: ${this.tipo} ordinato da ${cliente.nome} ${cliente.cognome}, email : ${cliente.email}`)
      }else{
@@ -108,7 +108,7 @@ clienteVeronicaFabiani.ordinaProdotto(cappelloSbianco)
 let pareoSverde= new Prodotto(TipoProdotto.CAPPELLO, 3, 'S', 'verde', StatoProdotto.ESAURITO)
 clienteVeronicaFabiani.ordinaProdotto(pareoSverde)
 
-let pareoMblu= new Prodotto(TipoProdotto.PAREO, 3, 'M', 'blu', StatoProdotto.DISPONBILE )
+let pareoMblu= new Prodotto(TipoProdotto.PAREO, 3, 'M', 'blu', StatoProdotto.DISPONIBILE )
 let clienteMartinaRossi= new Cliente('Martina', 'Rossi', 'martina@gmail.com', MetodoPagamento.PAYPAL)
 clienteMartinaRossi.ordinaProdotto(pareoMblu)
 pareoMblu.assegnaCliente(clienteMartinaRossi)
