@@ -6,13 +6,13 @@ type TipoProdotto = 'costume da bagno' | 'pareo' | 'cappello';
 type StatoProdotto = 'disponibile' | 'esaurito';
 */ 
 
-export enum TipoProdotto{
+export const enum TipoProdotto{
     COSTUME_DA_BAGNO = "costume da bagno",
     PAREO = "pareo",
     CAPPELLO = "cappello"
 }
 
-export enum StatoProdotto{
+export const enum StatoProdotto{
     DISPONBILE = "disponibile",
     ESAURITO = "esaurito"
 }

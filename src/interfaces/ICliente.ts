@@ -1,6 +1,6 @@
 import { IProdotto } from "./IProdotto";
 
-export enum MetodoPagamento{
+export const enum MetodoPagamento{
     CARTA_DI_CREDITO ="carta di credito",
     PAYPAL="paypal",
     CONTRASSEGNO ="contrassegno"
