@@ -13,7 +13,7 @@ export const enum TipoProdotto{
 }
 
 export const enum StatoProdotto{
-    DISPONBILE = "disponibile",
+    DISPONIBILE = "disponibile",
     ESAURITO = "esaurito"
 }
 

@@ -80,8 +80,8 @@ class ProcessoProduzione implements IProcessoProduzione{
 }
 
 
-let costumeSnero= new Prodotto (TipoProdotto.COSTUME_DA_BAGNO,2,'S','nero', StatoProdotto.DISPONBILE)
-let cappelloSbianco= new Prodotto(TipoProdotto.CAPPELLO, 1, 'S', 'bianco', StatoProdotto.DISPONBILE)
+let costumeSnero= new Prodotto (TipoProdotto.COSTUME_DA_BAGNO,2,'S','nero', StatoProdotto.DISPONIBILE)
+let cappelloSbianco= new Prodotto(TipoProdotto.CAPPELLO, 1, 'S', 'bianco', StatoProdotto.DISPONIBILE)
 
 
 let clienteMarcoVerdi= new Cliente('Marco', 'Verdi', 'marcoverdi@gmail.com', MetodoPagamento.PAYPAL)
